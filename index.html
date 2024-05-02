@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scrabble</title>
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="game.js" defer></script>
+    <script type="module" src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      #board {
+        float: left;
+        margin-right: 20px;
+      }
+   .input-area {
+        float: left;
+        width: 50%;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+      }
+      input {
+        margin-left: 10px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      #turnTracker {
+        margin-top: 10px;
+      }
+      #txt1txt, #txt2txt {
+        margin-top: 10px;
+      }
+      #gridRack, #gridRack2 {
+        margin-top: 10px;
+      }
+    </style>
+    </head>
+    <body>
+      <div id="board" class="grid-container" text-align:center></div>
+      <div class="input-area">
+        <p>
+          <label for="word">Word:</label>
+          <input type="text" id="word" placeholder="enter a word"/>
+          <div></div>
+          <label for="xAxis">x:</label>
+          <input type="number" id="xAxis" min="1" max="15" />
+          <div></div>
+          <label for="yAxis">y:</label>
+          <input type="number" id="yAxis" min="1" max="15" />
+
+          <label for="direction"></label>
+          
+          <select name="direction" id="direction">
+            <option value="horiz">Horizontal</option>
+            <option value="vert">Vertical</option>
+          </select>
+        </p>
+        <div id="turnTracker"></div>
+        <p></p>
+        <div id="txt1txt">
+          <input type="text" value="Player 1" id="txt1"/>
+          's Turn
+        </div>
+        <div id="gridRack" style="text-align:center"></div>
+        <div id="txt2txt">
+          <input type="text" value="Player 2" id="txt2"/>
+          's Turn
+        </div>
+        <div id="gridRack2" style="text-align:center"></div>
+        <p></p>
+      </div>
+    </body>
+</html>
